@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "picture": "https://img.freepik.com/free-photo/close-up-portrait-bride-groom-moment-before-kiss_192420-3251.jpg?w=740",
+    "name": "Basic Pack",
+    "description": "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.",
+    "price": "200"
+  },
+  {
+    "id": "2",
+    "picture": "https://img.freepik.com/free-photo/wedding-couple-best-friends-are-drinking-champagne-celebrating-park-wedding-day_8353-11143.jpg?t=st=1650144787~exp=1650145387~hmac=9e840352c610a5ae3fc950baf90d7ad76654141eecb00d88617aeeb9e8c2a374&w=740",
+    "name": "Budget Deal",
+    "description": "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.",
+    "price": "250"
+  },
+  {
+    "id": "3",
+    "picture": "https://img.freepik.com/free-photo/bride-groom-together-with-decor-kisses-hugs-luxury-decoration-wedding-day_237696-426.jpg?w=740",
+    "name": "Perfect Deal",
+    "description": "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.",
+    "price": "300"
+  },
+  {
+    "id": "4",
+    "picture": "https://img.freepik.com/free-photo/wedding-archway-backyard-happy-wedding-couple-outdoors-before-wedding-ceremony_8353-11057.jpg?t=st=1650144787~exp=1650145387~hmac=6708bc9bbb74d740319ff5645d77a7509a5c3ac810ea1e12610aec94f50140b3&w=740",
+    "name": "premium Pack",
+    "description": "Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.",
+    "price": "350"
+  }
+]

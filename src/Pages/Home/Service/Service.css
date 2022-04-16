@@ -1,0 +1,19 @@
+.cart img{
+height: 200px;
+width: 200px;
+border-radius: 5px;
+}
+.cart{
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 3px 3px 3px gray;
+}
+button{
+    padding: 10px 15px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
