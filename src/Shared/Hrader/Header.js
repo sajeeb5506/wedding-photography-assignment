@@ -1,28 +1,29 @@
 import React from 'react';
 
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar,  } from 'react-bootstrap';
 import './Header.css'
-import logo from '../../img/logo.jpg'
-import { NavLink } from 'react-router-dom';
+
+
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header>
-       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
   <Container>
-  <Navbar.Brand Link to="" className='text-primary text-large'>Wedding photography</Navbar.Brand>
+  <Navbar.Brand as={Link} to="/" className='text-primary text-large'>Wedding photography</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Home</Nav.Link>
-      <Nav.Link href="#pricing">About</Nav.Link>
-      <Nav.Link href="#pricing">Services</Nav.Link>
+      <Nav.Link  as={Link} to="/">Home</Nav.Link>
+      <Nav.Link   as={Link} to="/about">About</Nav.Link>
+      <Nav.Link  as={Link} to="/services">Services</Nav.Link>
   
   
     </Nav>
     <Nav>
-      <Nav.Link  href="#deets">Login</Nav.Link>
-      <Nav.Link  href="#memes">
-      Regester
+      <Nav.Link  as={Link} to="/login">Login</Nav.Link>
+      <Nav.Link  as={Link} to="/regester">
+      Sign Up
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
