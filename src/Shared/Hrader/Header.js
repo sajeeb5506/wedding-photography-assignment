@@ -5,7 +5,15 @@ import './Header.css'
 
 
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+const handelSignout=()=>{
+  signOut(auth);
+}
     return (
         <header>
        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
@@ -21,10 +29,19 @@ const Header = () => {
   
     </Nav>
     <Nav>
-      <Nav.Link  as={Link} to="/login">Login</Nav.Link>
-      <Nav.Link  as={Link} to="/regester">
-      Sign Up
-      </Nav.Link>
+      {
+        user?
+          //  <Nav.Link  as={Link} to="/login">Sign Out</Nav.Link>
+          <button className='btn1' onClick={handelSignout}>Sign Out</button>
+        :
+        // <Nav.Link  as={Link} to="/regester">
+        // Sign Up
+        // </Nav.Link>
+           <Nav.Link  as={Link} to="/login">Login</Nav.Link>
+      }
+      
+    
+
     </Nav>
   </Navbar.Collapse>
   </Container>

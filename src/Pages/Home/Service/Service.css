@@ -10,7 +10,7 @@ border-radius: 5px;
     padding: 10px;
     box-shadow: 3px 3px 3px gray;
 }
-button{
+.button{
     padding: 10px 15px;
     background-color: goldenrod;
     color: white;

@@ -10,6 +10,8 @@ import Login from './Pages/Login/Login';
 import Regester from './Pages/Login/Regester/Regester';
 import ServiceDetial from './Pages/ServiceDetial/ServiceDetial';
 import Notfound from './Shared/NotFound/Notfound';
+import Cheakout from './Pages/CheakOut/CheakOut/Cheakout';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 
 
 function App() {
@@ -22,6 +24,12 @@ function App() {
        <Route path='/services' element={<Services/>}></Route>
 
       <Route path='/serviceall/:serviceId'  element={<ServiceDetial/>}> </Route>
+
+      <Route path='/cheakout' element={
+        <RequireAuth>
+          <Cheakout></Cheakout>
+        </RequireAuth>
+      }></Route>
         
        <Route path='/header' element={<Header/>}></Route>
        <Route path='/login' element={<Login/>}></Route>

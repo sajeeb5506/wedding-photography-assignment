@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Login = () => {
@@ -15,7 +15,8 @@ const Login = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
-     
+     const location = useLocation();
+     let from =location.state?.from?.pathname || '/';
     const handelSubmit =event=>{
         event.preventDefault();
         const email = emailRef.current.value;
@@ -27,7 +28,7 @@ const Login = () => {
         navigate('/regester')
     }
     if(user){
-        navigate('/services')
+        navigate(from,{replace:true});
     }
     return (
         <div className='container w-50 mx-auto' >
