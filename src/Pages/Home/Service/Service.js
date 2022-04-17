@@ -9,6 +9,7 @@ const Service = ({service}) => {
     }
     return (
         <div>
+           
          <div className="cart">
          <img src={picture} alt="" />
             <h2>{name}</h2>

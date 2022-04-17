@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './Cheakout.css'
 const Cheakout = () => {
     return (
-        <div>
-            <h1>pleace cheak out</h1>
+        <div className='cheakout'>
+            <h1>Thanks For your Cheakout.</h1>
         </div>
     );
 };

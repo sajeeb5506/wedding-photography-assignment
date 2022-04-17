@@ -4,4 +4,12 @@
     color: white;
     border: none;
     border-radius: 5px;
+    margin-bottom: 200px;
+   
+}
+.serviceId{
+    height: 40vh;
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(68, 68, 196);
 }

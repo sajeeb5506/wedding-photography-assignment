@@ -12,6 +12,7 @@ import ServiceDetial from './Pages/ServiceDetial/ServiceDetial';
 import Notfound from './Shared/NotFound/Notfound';
 import Cheakout from './Pages/CheakOut/CheakOut/Cheakout';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import Blog from './Pages/Blog/blog';
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
        <Route path='/header' element={<Header/>}></Route>
        <Route path='/login' element={<Login/>}></Route>
        <Route path='/regester' element={<Regester/>}></Route>
+       <Route path='/blog' element={<Blog/>}></Route>
+
        <Route path='*' element={<Notfound/>}></Route>
        
      </Routes>
