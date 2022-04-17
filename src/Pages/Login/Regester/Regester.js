@@ -1,8 +1,17 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 const Regester = () => {
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
     const navigate = useNavigate();
     const emailRef = useRef('');
     const nameRef = useRef('');
@@ -13,11 +22,14 @@ const Regester = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-      
+        createUserWithEmailAndPassword(email, password);
     }
     const navigetRegester =event=>{
 
         navigate('/regester')
+    }
+    if(user){
+        navigate('/');
     }
 
     return (
@@ -49,7 +61,7 @@ const Regester = () => {
             <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
              <Button variant="primary" type="submit">
-             Login
+             Register
             </Button>
             </Form>
             <p>New to Register ? <Link to="/login" className='text-primary text-decoration-none ' onClick={navigetRegester} > Login</Link></p>
