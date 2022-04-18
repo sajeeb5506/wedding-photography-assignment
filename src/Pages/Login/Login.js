@@ -30,7 +30,7 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
      const location = useLocation();
-     let from =location.state?.from?.pathname || '/';
+     let from =location.state?.from?.pathname || '/services';
     const handelSubmit =event=>{
         event.preventDefault();
         const email = emailRef.current.value;
