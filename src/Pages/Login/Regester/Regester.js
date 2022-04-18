@@ -11,7 +11,7 @@ const Regester = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth ,{sendEmailVerification:true});
 
     const navigate = useNavigate();
     const emailRef = useRef('');
@@ -25,6 +25,9 @@ const Regester = () => {
         const password = passwordRef.current.value;
         createUserWithEmailAndPassword(email, password);
     }
+
+     
+
     const navigetRegester =event=>{
 
         navigate('/regester')

@@ -1,5 +1,17 @@
 .btn1{
     border: none;
     background-color: black;
-    color: rgb(221, 221, 221);
+    color: rgb(101, 125, 231);
+    font-size: 18px;
+    font-weight: 700;
+}
+.link-btn {
+    color: rgb(101, 125, 231) !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+.main-logo{
+    color: rgb(101, 125, 231) !important;
+    font-size: 25px !important;
+    font-weight: 700;
 }
