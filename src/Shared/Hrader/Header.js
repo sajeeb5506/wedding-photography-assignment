@@ -4,7 +4,7 @@ import { Container, Nav, Navbar,  } from 'react-bootstrap';
 import './Header.css'
 
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
@@ -22,10 +22,17 @@ const handelSignout=()=>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link className='link-btn' as={Link} to="/">Home</Nav.Link>
-      <Nav.Link  className='link-btn' as={Link} to="/about">About</Nav.Link>
-      <Nav.Link className='link-btn' as={Link} to="/services">Services</Nav.Link>
-      <Nav.Link className='link-btn' as={Link} to="/blog">Blogs</Nav.Link>
+
+
+ 
+      <NavLink className={({ isActive }) => 
+      (isActive ? "active" : "link-btn")} as={Link} to="/">Home</NavLink>
+      <NavLink  className={({ isActive }) => 
+      (isActive ? "active" : "link-btn")} as={Link} to="/about">About</NavLink>
+      <NavLink className={({ isActive }) => 
+      (isActive ? "active" : "link-btn")} as={Link} to="/services">Services</NavLink>
+      <NavLink className={({ isActive }) => 
+      (isActive ? "active" : "link-btn")} as={Link} to="/blog">Blogs</NavLink>
   
   
     </Nav>
@@ -38,11 +45,10 @@ const handelSignout=()=>{
         // <Nav.Link  as={Link} to="/regester">
         // Sign Up
         // </Nav.Link>
-           <Nav.Link className='link-btn' as={Link} to="/login">Login</Nav.Link>
+           <NavLink className={({ isActive }) => 
+           (isActive ? "active" : "link-btn")} as={Link} to="/login">Login</NavLink>
       }
-      
-    
-
+   
     </Nav>
   </Navbar.Collapse>
   </Container>

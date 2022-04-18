@@ -9,9 +9,18 @@
     color: rgb(101, 125, 231) !important;
     font-size: 18px;
     font-weight: 700;
+    margin-left: 10px;
+    text-decoration: none;
 }
 .main-logo{
     color: rgb(101, 125, 231) !important;
     font-size: 25px !important;
     font-weight: 700;
+}
+.active{
+    color: tomato !important;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+    text-decoration: none;
 }
